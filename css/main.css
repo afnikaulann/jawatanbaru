@@ -1,0 +1,123 @@
+body {
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background-image: url('../img/tg-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .background-img {
+        width: 500px;
+        height: 500px;
+        right: -25%;
+        top: 10%;
+    }
+}
+
+
+
+.spinner-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+#loadingSpinner.d-none {
+    display: none !important;
+}
+
+.form-control {
+    height: calc(1.75em + .75rem + 2px);
+    padding: .5rem .75rem;
+}
+
+/* custom slider */
+#sliderCarousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+#sliderCarousel .carousel-inner .carousel-item img {
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    #sliderCarousel .carousel-inner .carousel-item img {
+        height: 200px;
+    }
+}
+
+/* custom scrollbar */
+.list-group {
+    -ms-overflow-style: none;
+    /* Untuk Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Untuk Firefox */
+    overflow: -moz-scrollbars-none;
+    /* Untuk Firefox */
+}
+
+.list-group::-webkit-scrollbar {
+    display: none;
+    /* Untuk Webkit (Chrome, Safari, Opera) */
+}
+
+.text-primary {
+    color: #0369A1 !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0369A1;
+    border-color: #0369A1;
+    transition: all 0.3s ease;
+    /* Animasi transisi */
+}
+
+.btn-primary:hover {
+    color: #fff;
+    /* Tetap putih */
+    background-color: #025a8c;
+    /* Warna biru lebih gelap */
+    border-color: #025a8c;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    color: #fff;
+    background-color: #014a72;
+    /* Warna lebih gelap untuk fokus/klik */
+    border-color: #014a72;
+    box-shadow: 0 0 0 0.2rem rgba(3, 105, 161, 0.5);
+    /* Efek bayangan fokus */
+}
+
+.otp-input {
+    width: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.otp-input:last-child {
+    margin-right: 0;
+}
